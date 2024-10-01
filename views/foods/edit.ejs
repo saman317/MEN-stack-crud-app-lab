@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Food Item</title>
+  </head>
+  <body>
+    <!-- views/foods/new.ejs -->
+    <a href="/foods/">Back to Foods</a>
+    <h1>Update your <%= food.name %>!</h1>
+    <form action="/foods/<%= food._id %>?_method=PUT" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" value="<%= food.name %>" />
+
+      <label for="category">Category(Breakfast,Lunch, or Dessert):</label>
+      <input type="text" name="category" id="category" value="<%= food.category %>" />
+
+
+      <label for="needToCook">Need To Cook?</label>
+
+      <input type="checkbox" name="needToCook" id="needToCook" <%= food.needToCook ? 'checked' : '' %> />
+
+    
+
+      <button type="submit">Update Your Food Item</button>
+    </form>
+  </body>
+</html>

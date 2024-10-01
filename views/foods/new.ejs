@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a Food Item</title>
+</head>
+<body>
+    <!--views/foods/new.ejs-->
+    <a href="/foods">Back To Foods</a>
+    <h1>Create a New Food Item</h1>
+    <form action="/foods" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name"/>
+
+        <label for="Category">Category(Breakfast,Lunch, or Dessert):</label>
+        <input type="text" name="category" id="category"/>
+
+        
+        <label for="needToCook">Need To Cook?</label>
+        <input type="checkbox" name="needToCook" id="needToCook"/>
+
+        <button type="submit">Add New Food Item</button>
+
+
+
+        
+    </form>
+</body>
+</html>

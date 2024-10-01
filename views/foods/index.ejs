@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foods Index</title>
+</head>
+<body>
+    <!--views/foods/index.ejs-->
+    <a href="foods/new">Add New Food Item</a>
+    <h1><%= title%></h1>
+    <ul>
+
+        <% allFoods.forEach(food=> { %>
+            <li>
+                <a href="/foods/<%= food._id %>">
+            <%=food.name%> - <%=food.category%> - <%=food.needToCook ===true ?
+            "Do":"Do not" %> Need to Cook
+                </a>
+            </li>
+
+       <% })%>
+    </ul>
+    
+</body>
+</html>
